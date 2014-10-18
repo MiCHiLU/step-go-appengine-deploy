@@ -1,6 +1,6 @@
 # Go App Engine Deploy
 
-A step that deploys Go applications to Google App Engine. This step depends on `pjvds/setup-go-workspace` to setup the Go workspace first!
+A step that deploys Go applications to Google App Engine. This step depends on `michilu/setup-go-workspace` to setup the Go workspace first!
 
 ## Options
 
@@ -13,8 +13,7 @@ A step that deploys Go applications to Google App Engine. This step depends on `
 
     deploy:
       steps:
-        - pjvds/setup-go-workspace
-
-        - pjvds/appengine-deploy:
-            email: pj@wercker.com
-            password: $APP_ENGINE_PASS
+      - setup-go-workspace
+      - michilu/go-appengine-deploy:
+          email:    $APP_ENGINE_EMAIL
+          password: $APP_ENGINE_PASSWORD
