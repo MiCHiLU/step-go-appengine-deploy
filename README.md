@@ -11,9 +11,12 @@ A step that deploys Go applications to Google App Engine. This step depends on `
 
 ## Example
 
-    deploy:
-      steps:
-      - setup-go-workspace
-      - michilu/go-appengine-deploy:
-          email:    $APP_ENGINE_EMAIL
-          password: $APP_ENGINE_PASSWORD
+```
+box: michilu/goapp
+deploy:
+  steps:
+  - setup-go-workspace
+  - michilu/go-appengine-deploy:
+      email:    $APP_ENGINE_EMAIL
+      password: $APP_ENGINE_PASSWORD
+```
